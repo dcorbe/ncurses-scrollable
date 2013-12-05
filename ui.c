@@ -43,6 +43,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <curses.h>
+#include <unistd.h>
 
 #include "ui.h"
 
@@ -508,6 +509,7 @@ int ui_printf(UI *ui, char *format, ...)
 				count++;
 				getyx(ui->text, row, col);
 				wmove(ui->text, row, 0);
+				wrefresh(ui->text);
 				continue;
 			default:
 				buf[count] = ch;
