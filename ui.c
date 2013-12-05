@@ -506,7 +506,7 @@ int ui_printf(UI *ui, char *format, ...)
 			case '\r':
 				buf[count] = ch;
 				count++;
-				getmaxyx(ui->text, row, col);
+				getyx(ui->text, row, col);
 				wmove(ui->text, row, 0);
 				continue;
 			default:
