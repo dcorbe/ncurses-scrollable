@@ -433,7 +433,7 @@ int ui_printf(UI *ui, char *format, ...)
 	/*
 	 * We need to modify the format string, but we must also guarantee
 	 * SEGV safety in the process.  The only way to do that is to make
-	 * a copy of format on the call stack...
+	 * a copy of format on the heap...
 	 */
 	char *fmt = malloc(strlen(format) + 1);
 	strncpy(fmt, format, strlen(format));
