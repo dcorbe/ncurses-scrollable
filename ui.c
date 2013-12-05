@@ -130,11 +130,6 @@ int main(int argc, char **argv)
 			ui_printf(ui, "%s\n", buf);
 			wrefresh(ui->input);
 			break;
-		/* Testing */
-		case 'z':
-			ui_printf(ui, "DEBUG: %s\n", "Testing, 1 2 3!");
-			wrefresh(ui->input);
-			break;
 		default:
 			waddch(ui->input, ch);
 			wrefresh(ui->input);
