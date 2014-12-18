@@ -119,9 +119,9 @@ void ui_addline(UI *ui, size_t l, char *s);
  */
 void ui_scrollup(UI *ui);
 void ui_scrolldown(UI *ui);
-inline void ui_repaint(UI *ui);
+void ui_repaint(UI *ui);
 int ui_printf(UI *ui, char *format, ...);
-inline int waddch_stub(WINDOW *w, chtype c);
+int waddch_stub(WINDOW *w, chtype c);
 void ui_chomp(char *s);
 
 /*

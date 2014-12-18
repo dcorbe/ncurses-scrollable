@@ -329,7 +329,7 @@ void ui_scrolldown(UI *ui)
 	return;
 }
 
-inline void ui_repaint(UI *ui)
+void ui_repaint(UI *ui)
 {
 	int rows, cols;          /* Dimensions of the screen */
         int row, col;            /* Save the original cursor position
@@ -570,7 +570,7 @@ void strreverse(char* begin, char* end)
 /*
  * If we're not going to actually do anything, Just return OK and be done.
  */
-inline int waddch_stub(WINDOW *w, chtype c)
+int waddch_stub(WINDOW *w, chtype c)
 {
 	return OK;
 }
