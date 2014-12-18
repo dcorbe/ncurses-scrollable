@@ -1,0 +1,12 @@
+A (reasonably) fast HASH table implementation in C.
+
+--Implementation Notes--
+
+Care should be given to size the hash table correctly.  If the value of HASHSIZE is too small then you will have excessive collisions and the algorithm will perform slowly.  If you set HASHSIZE too big, your program will consume more memory than it needs to.
+
+The general rule of thumb is you should always size the hash table at or just above the maximum amount of objects you intend to store in your hash. 
+
+--The Hashing Algorithm--
+
+The hashing algorithm currently used (murmurhash2) is susceptible to a particular kind of attack vector designed to create excessive collisions.  This issue is known to have been fixed in murmurhash3 which is now a C++ implementation.  Long story short: don't use this code in projects where you must always guarantee performance better than O(n).  
+

@@ -1,0 +1,14 @@
+*.o
+*.core
+ui
+*.cache
+*.log
+config.h
+*.in
+configure
+*.status
+missing
+compile
+depcomp
+install-sh
+aclocal.m4
